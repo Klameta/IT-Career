@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC2DA39D-47DE-4321-9261-0EF002412831}</ProjectGuid>
+    <ProjectGuid>{B3C8F0AA-6860-4C3C-AC8C-50098C59198C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_03.HierarchyInheratence</RootNamespace>
-    <AssemblyName>03.HierarchyInheratence</AssemblyName>
+    <RootNamespace>_01.Animals</RootNamespace>
+    <AssemblyName>_01.Animals</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Cat.cs" />
-    <Compile Include="Dog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

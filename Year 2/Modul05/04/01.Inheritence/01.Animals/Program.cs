@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02.AnimalsComplex
+namespace _01.Animals
 {
-    class Puppy : Dog
+    class Program
     {
-        public void Weep()
+        static void Main(string[] args)
         {
-            Console.WriteLine("Weeping...");
         }
     }
 }

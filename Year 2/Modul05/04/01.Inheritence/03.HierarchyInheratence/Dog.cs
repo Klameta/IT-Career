@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02.AnimalsComplex
+namespace _03.HierarchyInheratence
 {
     class Dog : Animal
     {

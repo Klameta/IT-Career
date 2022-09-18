@@ -10,6 +10,12 @@ namespace _02.AnimalsComplex
     {
         static void Main(string[] args)
         {
+            Puppy puppy = new Puppy();
+            puppy.Bark();
+            puppy.Eat();
+            puppy.Weep();
+                
+
         }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace _03.HierarchyInheratence
 {
-    class Cat
+    class Cat : Animal
     {
+        public void Meow()
+        {
+            Console.WriteLine("Meowing...");
+        }
     }
 }
