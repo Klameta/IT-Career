@@ -12,7 +12,6 @@ namespace _03.FoodShortage
         {
             Dictionary<string, IBuyer> hungries = new Dictionary<string, IBuyer>();
             int people = int.Parse(Console.ReadLine());
-            int foodSum = 0;
 
             string[] cmdArgs = Console.ReadLine().Split();
             while(cmdArgs[0]!="End")
@@ -44,13 +43,13 @@ namespace _03.FoodShortage
                 cmdArgs = Console.ReadLine().Split();
             }
 
-            foreach (var hungry in hungries)
+            int foodSum = 0;
+            foreach (var hungry in hungries.Keys)
             {
-                foreach (var person in hungry.Value)
-                {
-
-                }
+                foodSum += hungries[hungry].Food;
             }
+
+            Console.WriteLine(foodSum);
         }
 
     }
