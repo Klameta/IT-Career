@@ -11,12 +11,10 @@ namespace _02.Cars
         string Model
         {
             get;
-            set;
         }
         string Color
         {
             get;
-            set;
         }
 
         string Start();

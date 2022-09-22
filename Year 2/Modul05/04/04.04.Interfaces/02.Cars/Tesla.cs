@@ -19,9 +19,9 @@ namespace _02.Cars
             Battery = battery;
         }
 
-        public string Model { get => model; set => model = value; }
-        public string Color { get => color; set => color = value; }
-        public int Battery { get => battery; set => battery = value; }
+        public string Model { get => model;private set => model = value; }
+        public string Color { get => color;private set => color = value; }
+        public int Battery { get => battery;private set => battery = value; }
 
         public string Start()
         {
@@ -31,7 +31,7 @@ namespace _02.Cars
 
         public string Stop()
         {
-           return "Breaaak!";
+            return "Breaaak!";
         }
 
         public override string ToString()
