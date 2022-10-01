@@ -25,7 +25,7 @@ namespace _06.Stack
 
         public void Push(params T[] values)
         {
-            for (int i = values.Length-1; i >= 0; i--)
+            for (int i = 0; i < values.Length; i++)
             {
                 list.Add(values[i]);
             }
@@ -37,7 +37,7 @@ namespace _06.Stack
                 Console.WriteLine("No elements");
                 return;
             }
-            list.RemoveAt(0);
+            list.RemoveAt(list.Count-1);
         }
     }
 }

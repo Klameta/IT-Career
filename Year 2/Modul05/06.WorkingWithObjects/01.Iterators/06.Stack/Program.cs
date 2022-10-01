@@ -26,7 +26,7 @@ namespace _06.Stack
                         break;
                 }
                 cmdArgs = Console.ReadLine()
-                .Split(',', ' ', StringSplitOptions.RemoveEmptyEntries);
+                .Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
             }
             foreach (var value in stack)
             {
