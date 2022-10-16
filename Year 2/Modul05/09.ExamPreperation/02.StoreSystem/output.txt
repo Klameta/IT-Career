@@ -1,0 +1,14 @@
+Store name must not be null or empty!
+Store FreshStore was successfully registerd in the system!
+Product name must not be null or empty!
+Quantity cannot be less or equal to 0!
+Product Chicken breasts was successfully delivered to FreshStore!
+Product Chicken wings was already sold out!
+Product Chicken breasts was successfully bought from FreshStore!
+Invalid Store: InvalidStore. Cannot find it in system!
+Stores: 1
+****Store: FreshStore <FoodStore>
+****Available products: <1>
+****** Chicken breasts (7)
+****Revenue: <14.81BGN>
+System Store Revenues: 14.81BGN
