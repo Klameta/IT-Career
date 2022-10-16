@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace _01.StorageMaster
+namespace _01.StorageMaster.Storages
 {
     public abstract class Storage
     {
@@ -15,14 +15,14 @@ namespace _01.StorageMaster
         private int garageSlots;
         private bool isFull;
         private List<Product> products;
-        private List<Vehicle> garage;
+        private Vehicle[] garage;
 
         protected Storage(string name, int capacity, int garageSlots, IEnumerable<Vehicle> vehicles)
         {
             Name = name;
             Capacity = capacity;
             GarageSlots = garageSlots;
-            garage = new List<Vehicle>(vehicles);
+            garage = vehicles.ToArray();
             products = new List<Product>();
         }
 
