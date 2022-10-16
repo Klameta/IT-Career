@@ -7,19 +7,19 @@ namespace _01.StorageMaster.Products
     public abstract class Product
     {
         private double price;
-
-        protected Product(double price)
-        {
-            this.price = price;
-        }
+        private double weight;
 
         protected Product(double weight, double price)
         {
             Weight = weight;
             Price = price;
         }
-
-        public double Weight { get; set; }
+                
+        public double Weight
+        {
+            get { return weight; }
+            set { weight = value; }
+        }
 
         public double Price
         {

@@ -6,9 +6,8 @@ namespace _01.StorageMaster.Products
 {
     public class Ram : Product
     {
-        public Ram(double price) : base(price)
+        public Ram(double price) : base(price, 0.1)
         {
-            Weight = 0.1;
         }
     }
 }

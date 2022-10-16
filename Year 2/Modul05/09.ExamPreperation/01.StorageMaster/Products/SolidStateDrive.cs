@@ -6,9 +6,8 @@ namespace _01.StorageMaster.Products
 {
     public class SolidStateDrive : Product
     {
-        public SolidStateDrive(double price) : base(price)
+        public SolidStateDrive(double price) : base(price, 0.2)
         {
-            Weight = 0.2;
         }
     }
 }

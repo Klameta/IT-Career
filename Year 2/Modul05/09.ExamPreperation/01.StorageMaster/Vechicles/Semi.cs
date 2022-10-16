@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _01.StorageMaster
+namespace _01.StorageMaster.Vechicles
 {
     public class Semi : Vehicle
     {
-        public Semi(int capacity) : base(capacity)
+        public Semi() : base(10)
         {
-            Capacity = 10;
         }
     }
 }

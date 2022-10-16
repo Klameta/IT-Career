@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _01.StorageMaster
+namespace _01.StorageMaster.Vechicles
 {
     public class Truck : Vehicle
     {
-        public Truck(int capacity) : base(capacity)
+        public Truck() : base(5)
         {
-            Capacity = 5;
         }
     }
 }

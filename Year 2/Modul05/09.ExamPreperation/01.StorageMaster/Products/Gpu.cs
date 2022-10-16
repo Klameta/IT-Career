@@ -6,9 +6,8 @@ namespace _01.StorageMaster.Products
 {
     public class Gpu : Product
     {
-        public Gpu( double price) : base( price)
+        public Gpu(double price) : base(price, 0.7)
         {
-            Weight = 0.7;
         }
     }
 }
