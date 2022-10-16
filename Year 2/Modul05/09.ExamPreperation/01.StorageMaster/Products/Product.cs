@@ -18,13 +18,13 @@ namespace _01.StorageMaster.Products
         public double Weight
         {
             get { return weight; }
-            set { weight = value; }
+           private set { weight = value; }
         }
 
         public double Price
         {
             get { return price; }
-            set
+           private set
             {
                 if (value < 0)
                 {

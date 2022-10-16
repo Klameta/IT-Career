@@ -46,18 +46,9 @@ namespace _01.StorageMaster.Vechicles
             get { return capacity; }
             private set { capacity = value; }
         }
-        public bool IsEmpty
-        {
-            get { return isEmpty; }
-            private set { isEmpty = trunk.Count == 0; }
-        }
+        public bool IsEmpty => trunk.Count == 0;
         public IReadOnlyCollection<Product> Trunk => trunk;
-        public bool IsFull
-        {
-            get { return isFull; }
-            private set { isFull = trunk.Count == capacity; }
-        }
-
+        public bool IsFull => trunk.Sum(x => x.Weight) >= Capacity;
 
     }
 }
