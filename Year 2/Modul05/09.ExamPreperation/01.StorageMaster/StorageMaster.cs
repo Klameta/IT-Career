@@ -122,10 +122,21 @@ namespace _01.StorageMaster
         {
             var storage = storages.FirstOrDefault(x => x.Name == storageName);
 
-            var Gpus = storage.Products.GroupBy(x => x.GetType().Name == "Gpu");
-            var Rams = storage.Products.GroupBy(x => x.GetType().Name == "Ram");
-            var SolidStateDrives = storage.Products.GroupBy(x => x.GetType().Name == "SolidStateDrive");
-            var HardDrives = storage.Products.GroupBy(x => x.GetType().Name == "HardDrive").Select(x=>x);
+            Dictionary<string, int> productCount = new Dictionary<string, int>();
+
+            foreach (var product in storage.Products)
+            {
+                if (!productCount.ContainsKey(product.GetType().Name))
+                {
+                    productCount.Add(product.GetType().Name, 1);
+                }
+                else
+                {
+                    productCount[product.GetType().Name]++;
+                }
+            }
+
+            throw new NotImplementedException();
         }
 
         public string GetSummary()

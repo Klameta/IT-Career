@@ -22,7 +22,8 @@ namespace _01.StorageMaster.Storages
             Name = name;
             Capacity = capacity;
             GarageSlots = garageSlots;
-            garage = vehicles.ToArray();
+            garage = vehicles.ToArray(); ;
+
             products = new List<Product>();
         }
 
