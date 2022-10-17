@@ -74,28 +74,58 @@ namespace _01.StorageMaster
 
         public string LoadVehicle(IEnumerable<string> productNames)
         {
+            int loadedProductsCount = 0;
+            int productCount = productNames.Count();
+
             foreach (var product in productNames)
             {
-                if (products.FirstOrDefault()==null)
+                if (!vehicle.IsFull)
                 {
+                    var currProduct = products.FirstOrDefault(x => x.GetType().Name == product);
 
+                    if (currProduct == null) throw new InvalidOperationException($"{product} is out of stock!");
+
+                    products.Remove(currProduct);
+                    vehicle.LoadProduct(currProduct);
+                    loadedProductsCount++;
                 }
             }
+
+            return $"Loaded {loadedProductsCount}/{productCount} products into {vehicle.GetType().Name}";
         }
 
         public string SendVehicleTo(string sourceName, int sourceGarageSlot, string destinationName)
         {
-            throw new NotImplementedException();
+            var sourceStorage = storages.FirstOrDefault(x => x.Name == sourceName);
+            var destinationStorage = storages.FirstOrDefault(x => x.Name == destinationName);
+
+            if (sourceStorage == null) throw new InvalidOperationException("Invalid source storage!");
+            if (destinationStorage == null) throw new InvalidOperationException("Invalid destination storage!");
+
+            var vehicle = sourceStorage.GetVehicle(sourceGarageSlot);
+            int slot = sourceStorage.SendVehicleTo(sourceGarageSlot, destinationStorage);
+
+            return $"Sent {vehicle.GetType().Name} to {destinationName} (slot {slot})";
         }
 
         public string UnloadVehicle(string storageName, int garageSlot)
         {
-            throw new NotImplementedException();
+            var storage = storages.FirstOrDefault(x => x.Name == storageName);
+            var currVehicle = storage.GetVehicle(garageSlot);
+            int productsInVehicle = currVehicle.Trunk.Count();
+            int loaded = storage.UnloadVehicle(garageSlot);
+
+            return $"Unloaded {loaded}/{productsInVehicle} products at {storageName}";
         }
 
         public string GetStorageStatus(string storageName)
         {
-            throw new NotImplementedException();
+            var storage = storages.FirstOrDefault(x => x.Name == storageName);
+
+            var Gpus = storage.Products.GroupBy(x => x.GetType().Name == "Gpu");
+            var Rams = storage.Products.GroupBy(x => x.GetType().Name == "Ram");
+            var SolidStateDrives = storage.Products.GroupBy(x => x.GetType().Name == "SolidStateDrive");
+            var HardDrives = storage.Products.GroupBy(x => x.GetType().Name == "HardDrive").Select(x=>x);
         }
 
         public string GetSummary()
