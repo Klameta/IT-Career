@@ -12,7 +12,7 @@ namespace BrokerCompanySystem
         private double bonus;
         private List<Building> buildings;
 
-        protected Broker(string name, int age, string city)
+        public Broker(string name, int age, string city)
         {
             Name = name;
             Age = age;
@@ -21,11 +21,12 @@ namespace BrokerCompanySystem
             bonus = 0;//might not work
         }
 
-        double ReceiveBonus(Building building)
+        public double ReceiveBonus(Building building)
         {
-            bonus += building.RentAmount * 2 * building.Stars / 100;
+            var bonusToAdd = building.RentAmount * 2 * building.Stars / 100;
+            bonus += bonusToAdd;
             buildings.Add(building);
-            return building.RentAmount * 2 * building.Stars / 100;
+            return bonusToAdd;
         }
         public override string ToString()
         {
@@ -36,7 +37,7 @@ namespace BrokerCompanySystem
 
             foreach (var bui in buildings)
             {
-                stringBuilder.AppendLine(bui.Name);
+                stringBuilder.AppendLine($"******{bui.Name}");
             }
             return stringBuilder.ToString().TrimEnd();
         }
