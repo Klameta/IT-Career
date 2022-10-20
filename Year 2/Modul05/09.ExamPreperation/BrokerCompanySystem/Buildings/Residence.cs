@@ -17,7 +17,7 @@ namespace BrokerCompanySystem.Buildings
             protected set
             {
                 base.Name = value;
-                if (string.Join("", value.TakeLast(5)) != "Residence") throw new ArgumentException("Name of residence buildings should end on Residence!");
+                if (string.Join("", value.TakeLast(9)) != "Residence") throw new ArgumentException("Name of residence buildings should end on Residence!");
 
             }
 

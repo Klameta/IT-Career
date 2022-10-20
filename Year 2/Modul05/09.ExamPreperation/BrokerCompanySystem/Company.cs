@@ -28,7 +28,8 @@ namespace BrokerCompanySystem
                 name = value;
             }
         }
-
+        //public List<Building> Buildings => buildings;
+        //public List<Broker> Brokers => brokers;
         public void AddBroker(Broker broker)
         {
             if (!brokers.Any(x => x.Name == broker.Name))
@@ -58,12 +59,13 @@ namespace BrokerCompanySystem
                 stringBuilder.AppendLine(broker.ToString());
             }
 
-            stringBuilder.AppendLine($"**Buildings – {buildings.Count}");
+            stringBuilder.AppendLine($"##Buildings: {buildings.Count}");
 
             foreach (var building in buildings)
             {
                 stringBuilder.AppendLine(building.ToString());
             }
+            return stringBuilder.ToString().TrimEnd();
         }
     }
 }

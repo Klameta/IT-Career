@@ -25,7 +25,7 @@ namespace BrokerCompanySystem
             return $"****Building: {Name} <{Stars}>" +
                 $"\n****Location: {City}" +
                 $"\n****RentAmount: {RentAmount}" +
-                $"\n****Is Available: {IsAvailable}";
+                $"\n****Is Available: {IsAvailable}".TrimEnd();
         }
 
         virtual public string Name

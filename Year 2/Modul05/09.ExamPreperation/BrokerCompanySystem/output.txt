@@ -1,0 +1,23 @@
+Company Deager was successfully registerd in the system!
+Company name must not be null or empty!
+Broker Sade was successfully hired in Deager!
+Invalid Company: InvalidCompany. Cannot find it in system!
+Name of hotel buildings should end on Hotel!
+Broker name must not be null or empty!
+Building Sun Business was successfully registerd in Deager catalog!
+Broker's age cannot be less than 16 or above 70!
+Rent amount cannot be less or equal to 0!
+Invalid Company: MissingCompanyName. Cannot find it in system!
+Companies: 1
+Company: Deager
+**Brokers: 1
+****Broker: Sade <35>
+
+****Location: Plovdiv
+
+****Bonus: 0
+**Buildings – 1
+****Building: Sun Business <4>
+****Location: Sofia
+****RentAmount: 50000
+****Is Available: True
