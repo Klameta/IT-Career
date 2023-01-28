@@ -13,32 +13,28 @@ namespace _01.ColourfulFigure
             int lines = int.Parse(Console.ReadLine());
             List<ColouredFigure> figures = new List<ColouredFigure>();
 
-            
+
             for (int i = 0; i < lines; i++)
             {
                 string[] cmndsArgs = Console.ReadLine().Split();
+                string color = cmndsArgs[1];
+                int size = int.Parse(cmndsArgs[2]);
+                ColouredFigure figure = null;
                 switch (cmndsArgs[0])
                 {
                     case "Triangle":
-                        string color = cmndsArgs[1];
-                        int size = int.Parse(cmndsArgs[2]);
-                        Triangle triangle = new Triangle(color, size);
-                        figures.Add(triangle);
+                        figure = new Triangle(color, size);
                         break;
                     case "Circle":
-                        color = cmndsArgs[1];
-                        size = int.Parse(cmndsArgs[2]);
-                        Circle circle = new Circle(color, size);
-                        figures.Add(circle);
+                        figure = new Circle(color, size);
                         break;
                     case "Square":
-                        color = cmndsArgs[1];
-                        size = int.Parse(cmndsArgs[2]);
-                        Square square = new Square(color, size);
-                        figures.Add(square);
+                        figure = new Square(color, size);
                         break;
                 }
+                figures.Add(figure);
             }
+
             foreach (var figure in figures)
             {
                 Console.WriteLine(figure);

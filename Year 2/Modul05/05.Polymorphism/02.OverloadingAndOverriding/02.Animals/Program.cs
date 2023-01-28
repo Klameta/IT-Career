@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace _02.Animals
+namespace Animals
 {
-    class Program
+   public  class Program
     {
         static void Main(string[] args)
         {

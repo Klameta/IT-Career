@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _02.Animals
+namespace Animals
 {
-    class Animal
+    public class Animal
     {
         private string name;
         private string favFood;
