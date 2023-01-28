@@ -1,0 +1,32 @@
+CREATE DATABASE employees;
+
+CREATE TABLE people
+(
+id INT NOT NULL,
+email VARCHAR(50) NOT NULL,
+first_name VARCHAR(50),
+last_name VARCHAR(50)
+)
+
+ALTER TABLE people
+ADD salary DECIMAL 
+
+ALTER TABLE people
+DROP COLUMN last_name
+
+ALTER TABLE people
+MODIFY COLUMN email VARCHAR(100)
+employees
+ALTER TABLE people
+ADD CONSTRAINT pk_id PRIMARY KEY(id)
+
+ALTER TABLE people
+DROP CONSTRAINT KEY;
+
+ALTER TABLE people
+ADD CONSTRAINT uq_email UNIQUE (email)
+SELECT * FROM people
+ADD UNIQUE (first_name),
+ADD id INT
+SELECT * FROM people
+ALTER COLUMN salary SET DEFAULT 0
