@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Division
 {
-    internal class Division
+    public class Divider
     {
         public double Divide(double firstNum, double secondNum)
         {
-            return firstNum/secondNum;
+            return firstNum / secondNum;
         }
     }
 }
