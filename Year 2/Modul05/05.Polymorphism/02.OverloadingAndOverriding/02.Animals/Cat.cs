@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _02.Animals
+namespace Animals
 {
-    class Cat : Animal
+   public class Cat : Animal
     {
         public Cat(string name, string favFood) : base(name, favFood)
         {

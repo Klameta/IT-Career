@@ -10,10 +10,13 @@ namespace _01.Figures
     {
         static void Main(string[] args)
         {
-            Circle circle = new Circle(10);
+            int circleSize = int.Parse(Console.ReadLine());
+            Circle circle = new Circle(circleSize);
             circle.Draw();
 
-            Rectangle rectangle = new Rectangle(10, 5);
+            int rectangleWidth = int.Parse(Console.ReadLine());
+            int rectangleHeight = int.Parse(Console.ReadLine());
+            Rectangle rectangle = new Rectangle(rectangleHeight, rectangleWidth);
             rectangle.Draw();
         }
     }
