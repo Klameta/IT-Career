@@ -4,12 +4,12 @@
     {
         static void Main(string[] args)
         {
-            int input = int.Parse(Console.ReadLine());
+            ulong input = ulong.Parse(Console.ReadLine());
 
             Console.WriteLine(Fiboncci(input));
         }
 
-        public static int Fiboncci(int n)
+        public static ulong Fiboncci(ulong n)
         {
             if (n <= 2)
             {
