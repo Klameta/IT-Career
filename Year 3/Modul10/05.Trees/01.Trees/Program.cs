@@ -15,6 +15,8 @@
                                         new Tree<int>(6))
                                     );
             tree.Print();
+            Console.WriteLine(string.Join(" ", tree.OrderDFS()));
+            Console.WriteLine(string.Join(" ", tree.BFS()));
         }
     }
 }

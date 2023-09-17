@@ -27,5 +27,41 @@ namespace _01.Trees
                 child.Print(indent + 1);
             }
         }
+
+        public IEnumerable<T> OrderDFS()
+        {
+            IList<T> order = new List<T>();
+            DFS(order);
+            return order;
+        }
+
+        private void DFS(IList<T> order)
+        {
+            foreach (var child in children)
+            {
+                child.DFS(order);
+            }
+
+            order.Add(value);
+        }
+
+        public IEnumerable<T> BFS()
+        {
+            List<T> order = new List<T>();
+            Queue<Tree<T>> queue = new Queue<Tree<T>>();
+
+            queue.Enqueue(this);
+
+            while(queue.Count > 0)
+            {
+                Tree<T> element = queue.Dequeue();
+                order.Add(element.value);
+                foreach (var child in element.children)
+                {
+                    queue.Enqueue(child);
+                }
+            }
+            return order;
+        }
     }
 }
